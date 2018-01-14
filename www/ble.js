@@ -1,4 +1,3 @@
-var atob = require('atob');
 // (c) 2014-2016 Don Coleman
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,7 +25,7 @@ var stringToArrayBuffer = function(str) {
 };
 
 var base64ToArrayBuffer = function(b64) {
-    return stringToArrayBuffer(atob(b64));
+    return stringToArrayBuffer(global.atob(b64));
 };
 
 function massageMessageNativeToJs(message) {
